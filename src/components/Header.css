@@ -1,0 +1,9 @@
+.nav{
+    background-color: #F2474C;
+    height: 60px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #d6d6d6;
+}

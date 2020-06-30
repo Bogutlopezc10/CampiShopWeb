@@ -1,17 +1,17 @@
 import React from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import history from '../history';
+import Header from './Header';
 import HomePage from '../pages/HomePage';
 
 const App = () => {
     return (
       <div>
         <Router history={history}>
-          <div>
+            <Header />
             <Switch>
                 <Route path="/" exact component={HomePage} />
             </Switch>
-          </div>
         </Router>
       </div>
     );
