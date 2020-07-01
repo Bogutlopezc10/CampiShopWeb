@@ -7,18 +7,18 @@ import ProductListPage from '../pages/Products/ProductListPage';
 import Error from './Error';
 
 const App = () => {
-    return (
+  return (
+    <Router history={history}>
       <div>
-        <Router history={history}>
-            <Header />
-            <Switch>
-                <Route path="/" exact component={HomePage} />
-                <Route path="/products" exact component={ProductListPage} />
-                <Route path="/error" exact component={Error} />
-            </Switch>
-        </Router>
-      </div>
-    );
-  };
+        <Header />
+        <Switch>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/products" exact component={ProductListPage} />
+            <Route path="/error" exact component={Error} />
+        </Switch>
+      </div>  
+    </Router> 
+  );
+};
   
-  export default App;
+export default App;

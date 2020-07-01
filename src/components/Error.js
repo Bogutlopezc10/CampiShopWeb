@@ -1,7 +1,6 @@
-import React from 'react'
+import React from 'react';
 
 const Error = () => {
-
     return(
         <div>
             Algo salio mal

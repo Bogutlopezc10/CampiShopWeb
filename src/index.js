@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
@@ -14,10 +14,10 @@ export const store = createStore(
 );
 
 ReactDOM.render(
-    <Provider store={store}>
-        <React.StrictMode>
+    <React.StrictMode>
+        <Provider store={store}>
             <App />
-        </React.StrictMode>
-    </Provider>
+        </Provider>
+    </React.StrictMode>
     , document.querySelector('#root')
 );

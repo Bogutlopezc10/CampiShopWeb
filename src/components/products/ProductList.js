@@ -2,7 +2,6 @@ import React from 'react'
 import Product from '../../components/products/Product'
 
 const ProductList = (props) =>{
-
     const renderData = () =>{
         const{products, loading} = props;
         if(products.length === 0 && loading){
@@ -25,6 +24,7 @@ const ProductList = (props) =>{
               )
         )
     }
+
     return(
         renderData()
     )
