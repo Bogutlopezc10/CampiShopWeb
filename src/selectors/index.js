@@ -1,4 +1,4 @@
 // Products
 export const getProducts = (state) => {
-    return Object.values(state.products.data)
+  return Object.values(state.products.data)
 }

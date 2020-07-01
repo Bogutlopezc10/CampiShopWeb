@@ -6,20 +6,20 @@ import { getProducts } from '../../selectors/index'
 import { useDispatch, useSelector } from 'react-redux';
 
 const ProductListContainer = () => {
-    const dispatch = useDispatch();
-    const products = useSelector(getProducts);
-    const loading = useSelector(store => store.products.isLoading);
+  const dispatch = useDispatch();
+  const products = useSelector(getProducts);
+  const loading = useSelector(store => store.products.isLoading);
 
-    useEffect(() => {
-        dispatch(fetchProducts());
-    },[dispatch])
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch])
 
-    return(
-        <ProductList
-            products = {products}
-            loading = {loading}
-        />
-    )
+  return (
+    <ProductList
+      products={products}
+      loading={loading}
+    />
+  )
 }
 
 export default ProductListContainer;

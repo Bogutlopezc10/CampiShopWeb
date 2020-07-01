@@ -1,7 +1,7 @@
 import history from '../history'
 import shop from '../apis/shop';
 
-import {FETCH_PRODUCTS} from './types'
+import { FETCH_PRODUCTS } from './types'
 
 export const fetchProducts = () => async dispatch => {
   try {

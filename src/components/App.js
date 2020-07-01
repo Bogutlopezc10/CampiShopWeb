@@ -12,13 +12,13 @@ const App = () => {
       <div>
         <Header />
         <Switch>
-            <Route path="/" exact component={HomePage} />
-            <Route path="/products" exact component={ProductListPage} />
-            <Route path="/error" exact component={Error} />
+          <Route path="/" exact component={HomePage} />
+          <Route path="/products" exact component={ProductListPage} />
+          <Route path="/error" exact component={Error} />
         </Switch>
-      </div>  
-    </Router> 
+      </div>
+    </Router>
   );
 };
-  
+
 export default App;

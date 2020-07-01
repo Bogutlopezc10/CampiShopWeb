@@ -9,15 +9,15 @@ import App from './components/App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const store = createStore(
-    reducers,
-    composeEnhancers(applyMiddleware(reduxThunk))
+  reducers,
+  composeEnhancers(applyMiddleware(reduxThunk))
 );
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </React.StrictMode>
-    , document.querySelector('#root')
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>
+  , document.querySelector('#root')
 );
