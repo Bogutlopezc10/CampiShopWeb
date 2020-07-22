@@ -12,11 +12,6 @@ const Header = () => {
                 </Link>
       </div>
       <nav className="col-auto px-0 menu d-flex align-items-stretch">
-        <Link className="d-flex px-3 align-items-center" to={'/products'}>
-          <div className="d-flex flex-column text-center">
-            <span>Categories</span>
-          </div>
-        </Link>
         <Link className="d-flex px-3 align-items-center" to={'/categories'}>
           <div className="d-flex flex-column text-center">
             <FaShoppingCart />
