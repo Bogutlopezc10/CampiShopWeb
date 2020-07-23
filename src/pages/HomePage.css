@@ -21,17 +21,24 @@
 }
 
 .main-home h1{
-  font-size: 60px;
+  font-size: 4.5rem;
   color: #d6d6d6;
+  font-family: 'Pacifico';
   text-shadow: 2px 2px 2px black;
   text-align: center;
 }
 
+.icons{
+  text-align: center;
+}
+
 .icons svg{
-  font-size: 80px;
+  font-size: 4.5rem;
   color: #f8f9fa;
   margin-right: 15px;
   margin-left: 15px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
 .icons svg:hover{
@@ -143,9 +150,9 @@
 
 @media (max-width: 768px) { 
   .main-home h1{
-    font-size: 45px;
+    font-size: 3rem;
   }
   .icons svg{
-    font-size: 50px;
+    font-size: 3rem;
   }
 }
