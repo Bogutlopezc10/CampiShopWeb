@@ -8,6 +8,7 @@ const defaultState = {
   isSuccess: false,
   messageSuccess: null,
   isLoading: true,
+  filter: 'All'
 }
 
 export default (state = defaultState, action) => {

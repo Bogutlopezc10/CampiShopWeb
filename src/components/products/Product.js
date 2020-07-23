@@ -5,9 +5,9 @@ const Product = (props) => {
     const { product } = props;
     return (
       <div>
-        <h1>{product.name}</h1>
-        <p>{product.description}</p>
-        <i>{product.price}</i>
+        <h1>{product.productName}</h1>
+        <p>{product.productDescription}</p>
+        <i>{product.productPrice}</i>
       </div>
     )
   }
