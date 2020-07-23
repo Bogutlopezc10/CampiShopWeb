@@ -21,7 +21,7 @@
 }
 
 .main-home h1{
-  font-size: 4.5rem;
+  font-size: 50px;
   color: #d6d6d6;
   font-family: 'Pacifico';
   text-shadow: 2px 2px 2px black;
@@ -33,7 +33,7 @@
 }
 
 .icons svg{
-  font-size: 4.5rem;
+  font-size: 50px;
   color: #f8f9fa;
   margin-right: 15px;
   margin-left: 15px;
@@ -51,13 +51,13 @@
   margin: auto;
   margin-top: 15px;
   width: 100%;
-  max-width: 220px;
-  height: 45px;
+  max-width: 210px;
+  height: 40px;
   background: #fff;
   transform: translate3d(0px, 0%, 0px);
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   letter-spacing: .05em;
   transition-delay: .6s;
   overflow: hidden;
@@ -91,7 +91,7 @@
 
 .btn-epic div{
   position: relative;
-  top: 12px;
+  top: 10px;
   width: 100%;
   height: 26px;
   text-transform: uppercase;
@@ -144,15 +144,15 @@
 }
 
 .btn-epic span svg{
-  font-size: 18px;
+  font-size: 17px;
   padding-bottom: 2px;
 }
 
 @media (max-width: 768px) { 
   .main-home h1{
-    font-size: 3rem;
+    font-size: 40px;
   }
   .icons svg{
-    font-size: 3rem;
+    font-size: 40px;
   }
 }

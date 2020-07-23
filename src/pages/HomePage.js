@@ -19,7 +19,7 @@ const HomePage = () => {
             <FaXbox />
             <FaDesktop />
           </div>
-          <div className="mt-4 d-flex justify-content-center">
+          <div className="mt-3 d-flex justify-content-center">
             <Link to="/products" className="btn-epic">
               <div>
                 <span>See catalogue <FaAngleDoubleRight /></span>
