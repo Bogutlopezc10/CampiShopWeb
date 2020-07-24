@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductSpecificationListContainer from '../../containers/productSpecifications/ProductSpecificationListContainer'
 
 const Product = (props) => {
   const renderData = () => {
@@ -8,6 +9,9 @@ const Product = (props) => {
         <h1>{product.productName}</h1>
         <p>{product.productDescription}</p>
         <i>{product.productPrice}</i>
+        <ProductSpecificationListContainer
+          productId = {product.productId}
+        />
       </div>
     )
   }

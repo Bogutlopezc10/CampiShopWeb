@@ -3,7 +3,9 @@ import ProductListContainer from '../../containers/products/ProductListContainer
 
 const ProductListPage = () => {
   return (
-    <ProductListContainer />
+    <div style = {{marginTop: '90px'}}>
+      <ProductListContainer />
+    </div>
   )
 }
 

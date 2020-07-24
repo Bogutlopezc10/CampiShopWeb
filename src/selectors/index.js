@@ -8,3 +8,10 @@ export const getProducts = () => {
     return data;
   }
 }
+
+export const getProductSpecificationsByProductId = (productId) => {
+  const state = store.getState();
+  const data = Object.values(state.productSpecifications.data);
+
+  return data.filter(d => d.productId === parseInt(productId));
+}
