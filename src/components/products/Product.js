@@ -1,6 +1,5 @@
 import React from 'react'
 import ProductSpecificationListContainer from '../../containers/productSpecifications/ProductSpecificationListContainer'
-import CategoryListContainer from '../../containers/categories/CategoryListContainer'
 
 const Product = (props) => {
   const renderData = () => {
@@ -13,7 +12,6 @@ const Product = (props) => {
         <ProductSpecificationListContainer
           productId = {product.productId}
         />
-        <CategoryListContainer />
       </div>
     )
   }

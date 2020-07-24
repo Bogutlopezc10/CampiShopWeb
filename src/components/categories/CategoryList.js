@@ -1,7 +1,7 @@
 import React from 'react'
 import Category from '../../components/categories/Category'
 
-const CategoryList = ({ categories, loading }) => {
+const CategoryList = ({ categories, loading, onChangeFilter }) => {
 
   const renderData = () => {
     if (categories.length === 0 && !loading) {
@@ -20,6 +20,7 @@ const CategoryList = ({ categories, loading }) => {
       categories.map(category =>
         <Category
           category={category}
+          onChangeFilter = {onChangeFilter}
         />
       )
     )
