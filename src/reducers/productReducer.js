@@ -17,7 +17,7 @@ export default (state = defaultState, action) => {
     case FETCH_PRODUCTS:
       return {
         ...state,
-        data: { ...state.data, ..._.mapKeys(action.payload, 'id') },
+        data: { ...state.data, ..._.mapKeys(action.payload, 'productId') },
         isLoading: false
       };
     case CHANGE_FILTER_CATEGORY:
