@@ -8,7 +8,7 @@ const Category = ({ category, onChangeFilter }) => {
   return (
     <>
       <label>{category.name}</label>
-      <input type="radio" name="category" value={category.name} onChange={(e) => handleChangeFilter(e)} />
+      <input type="radio" name="category" value={category.id} onChange={(e) => handleChangeFilter(e)} />
     </>
   )
 }

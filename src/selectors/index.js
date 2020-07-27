@@ -5,8 +5,20 @@ export const getProducts = () => {
   const state = store.getState();
   const filter = state.products.filter;
   const detailSpecifications = state.products.filterDetailSpecification;
+  let filterByDetails = [];
   let data = Object.values(state.products.data)
   if (filter === 'All') {
+    return data;
+  }else{
+    console.log(filter)
+    data = data.filter(product => product.categoryId === parseInt(filter));
+    for (let variable in detailSpecifications) {
+      filterByDetails = detailSpecifications[variable].detailSpecificationsId;
+      let filterByDetailsSet = new Set(filterByDetails);
+      data = data.filter((o) => 
+        o.detailSpecificationsId.some((detail) => filterByDetailsSet.has(detail))
+      );
+    }
     return data;
   }
 }
