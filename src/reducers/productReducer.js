@@ -9,7 +9,8 @@ const defaultState = {
   isSuccess: false,
   messageSuccess: null,
   isLoading: true,
-  filter: 'All'
+  filter: 'All',
+  filterDetailSpecification:{}
 }
 
 export default (state = defaultState, action) => {
@@ -21,10 +22,10 @@ export default (state = defaultState, action) => {
         isLoading: false
       };
     case CHANGE_FILTER_CATEGORY:
-      return {
+      return{
         ...state,
         filter: action.payload
-      };
+      }
     default:
       return state;
   }
