@@ -1,0 +1,10 @@
+.specification-name{
+  color: black;
+}
+
+.specification-name span{
+  font-size: 16px;
+  font-weight: normal;
+  color: gray;
+  font-family: 'Pacifico';
+}

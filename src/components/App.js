@@ -1,4 +1,5 @@
 import React from 'react';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import { Router, Switch, Route } from 'react-router-dom';
 import history from '../history';
 import Header from './Header';

@@ -1,4 +1,5 @@
 import React from 'react'
+import './Category.css'
 import Category from '../../components/categories/Category'
 
 const CategoryList = ({ categories, loading, onChangeFilter }) => {
@@ -17,12 +18,16 @@ const CategoryList = ({ categories, loading, onChangeFilter }) => {
       )
     }
     return (
-      categories.map(category =>
-        <Category
-          category={category}
-          onChangeFilter = {onChangeFilter}
-        />
-      )
+      <div className="container-filters">
+        <div className="mt-4">
+          {categories.map(category =>
+            <Category
+              category={category}
+              onChangeFilter={onChangeFilter}
+            />
+          )}
+        </div>
+      </div>
     )
   }
   return (

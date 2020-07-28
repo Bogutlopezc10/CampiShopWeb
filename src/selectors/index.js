@@ -10,7 +10,6 @@ export const getProducts = () => {
   if (filter === 'All') {
     return data;
   }else{
-    console.log(filter)
     data = data.filter(product => product.categoryId === parseInt(filter));
     for (let variable in detailSpecifications) {
       filterByDetails = detailSpecifications[variable].detailSpecificationsId;
@@ -23,7 +22,7 @@ export const getProducts = () => {
   }
 }
 
-//Product Specifications
+// Product Specifications
 export const getProductSpecificationsByProductId = (productId) => {
   const state = store.getState();
   const data = Object.values(state.productSpecifications.data);

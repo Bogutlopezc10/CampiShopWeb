@@ -1,0 +1,56 @@
+.container-products{
+  left: 280px;
+  width: calc(100% - 280px);
+  position: absolute;
+  margin-top: 80px;
+}
+
+.container-loader{
+  left: 280px;
+  width: calc(100% - 280px);
+  position: absolute;
+  height: calc(100vh - 63px);
+  margin-top: 63px;
+}
+
+.main-loader{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.card-body{
+  border-top: 1px solid #e9ecef;
+}
+
+.card-title{
+  font-family: 'Pacifico';
+  font-weight: bold;
+}
+
+.card-text{
+  font-size: 14px;
+  font-style: italic;
+  color:gray;
+}
+
+.card-specification{
+  font-family: 'Pacifico';
+  font-weight: bold;
+  color: red;
+}
+
+.card-price{
+  color:black;
+  font-size: 17px;
+  font-family: 'Pacifico';
+  bottom: 2px;
+  right: 10px;
+  position: absolute;
+}
+
+.container-products .row{
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}

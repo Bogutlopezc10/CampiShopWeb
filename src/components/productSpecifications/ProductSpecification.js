@@ -1,9 +1,9 @@
 import React from 'react'
+import './ProductSpecification.css';
 
 const ProductSpecification = ({ specification }) => {
-
   return (
-    <h5>{specification.specificationName}: <span style = {{fontWeight: 'normal', fontSize: '16px'}}>{specification.detailSpecificationName}</span></h5>
+    <h6 className="specification-name">- {specification.specificationName}: <span>{specification.detailSpecificationName}</span></h6>
   );
 }
 

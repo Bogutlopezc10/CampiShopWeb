@@ -4,10 +4,10 @@ import CategoryListContainer from '../../containers/categories/CategoryListConta
 
 const ProductListPage = () => {
   return (
-    <div style = {{marginTop: '90px'}}>
-      <ProductListContainer />
+    <>
       <CategoryListContainer />
-    </div>
+      <ProductListContainer />
+    </>
   )
 }
 
