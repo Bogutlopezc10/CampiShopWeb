@@ -13,6 +13,11 @@
   margin-top: 63px;
 }
 
+.card{
+  animation-name: card-in;
+  animation-duration: 2s;
+}
+
 .main-loader{
   position: absolute;
   left: 50%;
@@ -41,16 +46,34 @@
   color: red;
 }
 
+.color-product{
+  height: 22px;
+  width: 22px;
+  bottom: 11px;
+  left: 20px;
+  position: absolute;
+  border-radius: 50%;
+}
+
 .card-price{
   color:black;
   font-size: 17px;
   font-family: 'Pacifico';
-  bottom: 2px;
-  right: 10px;
+  bottom: 4px;
+  right: 20px;
   position: absolute;
 }
 
 .container-products .row{
   margin-left: 0px!important;
   margin-right: 0px!important;
+}
+
+@keyframes card-in {
+  from{
+    transform:scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }

@@ -18,6 +18,7 @@ const Product = (props) => {
             />
           </div>
           <br></br>
+          <div className="color-product" style={{backgroundColor:"#0062cc"}}></div>
           <h6 className="card-price"><NumberFormat value={product.productPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h6>
         </div>
       </div>

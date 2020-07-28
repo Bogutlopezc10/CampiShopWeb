@@ -10,7 +10,7 @@ const ProductList = (props) => {
       return (
         <div className="container-loader">
           <div className="main-loader">
-            <Loader type="Bars" color="#ec0d14" height={80} width={80} />
+            <Loader type="Bars" color="#ec0d14" height={60} width={60} />
           </div>
         </div>
       )
