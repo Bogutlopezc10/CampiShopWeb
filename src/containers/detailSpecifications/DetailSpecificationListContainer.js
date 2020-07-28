@@ -11,9 +11,11 @@ class DetailSpecificationListContainer extends React.Component {
     this.props.fetchDetailSpecifications(specificationId);
   }
   render(){
+    const {specificationId} = this.props;
     return(
       <DetailSpecificationList
         details = {this.props.details}
+        specificationId = {specificationId}
       />
     )
   }

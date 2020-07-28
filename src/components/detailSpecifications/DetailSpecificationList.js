@@ -1,25 +1,26 @@
 import React from 'react'
 import DetailSpecification from '../../components/detailSpecifications/DetailSpecification'
 
-const DetailSpecificationList = ({ details }) => {
+const DetailSpecificationList = ({ details, specificationId }) => {
 
   const renderData = () => {
 
-    if(details.length === 0){
-      return(
+    if (details.length === 0) {
+      return (
         <div>Loading....</div>
       )
     }
-    return(
+    return (
       details.map(detail =>
         <DetailSpecification
-          key = {detail.id}
-          detail = {detail}
+          key={detail.id}
+          detail={detail}
+          specificationId={specificationId}
         />
       )
     )
   }
-  return(
+  return (
     renderData()
   )
 }

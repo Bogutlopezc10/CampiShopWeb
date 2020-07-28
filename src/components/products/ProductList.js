@@ -12,7 +12,7 @@ const ProductList = (props) => {
           <div className="main-loader">
             <Loader type="Bars" color="#ec0d14" height={80} width={80} />
           </div>
-        </div>        
+        </div>
       )
     }
 
@@ -34,7 +34,7 @@ const ProductList = (props) => {
       </div>
     )
   }
-  
+
   return (
     renderData()
   )

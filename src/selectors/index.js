@@ -9,12 +9,12 @@ export const getProducts = () => {
   let data = Object.values(state.products.data)
   if (filter === 'All') {
     return data;
-  }else{
+  } else {
     data = data.filter(product => product.categoryId === parseInt(filter));
     for (let variable in detailSpecifications) {
-      filterByDetails = detailSpecifications[variable].detailSpecificationsId;
+      filterByDetails = detailSpecifications[variable];
       let filterByDetailsSet = new Set(filterByDetails);
-      data = data.filter((o) => 
+      data = data.filter((o) =>
         o.detailSpecificationsId.some((detail) => filterByDetailsSet.has(detail))
       );
     }
@@ -41,7 +41,7 @@ export const getSpecificationsByCategoryId = () => {
   const filter = state.products.filter;
   const data = Object.values(state.specifications.data);
 
-  if(filter !== 'All'){
+  if (filter !== 'All') {
     return data.filter(s => s.categoryId === parseInt(filter));
   }
   return [];
