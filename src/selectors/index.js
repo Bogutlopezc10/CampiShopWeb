@@ -34,3 +34,21 @@ export const getCategories = () => {
   const state = store.getState();
   return Object.values(state.categories.data);
 }
+
+//Specifications
+export const getSpecificationsByCategoryId = () => {
+  const state = store.getState();
+  const filter = state.products.filter;
+  const data = Object.values(state.specifications.data);
+
+  if(filter !== 'All'){
+    return data.filter(s => s.categoryId === parseInt(filter));
+  }
+  return [];
+}
+
+export const getDetailSpecificationBySpecificationId = (specificationId) => {
+  const state = store.getState();
+  const data = Object.values(state.details.data);
+  return data.filter(d => d.specificationId === parseInt(specificationId))
+}
