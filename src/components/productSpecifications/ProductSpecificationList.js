@@ -8,7 +8,7 @@ const ProductSpecificationList = ({ specifications, loading }) => {
     if (specifications.length === 0 && loading) {
       return (
         <div className="text-center">
-          <Loader type="ThreeDots" color="#ec0d14" height={40} width={40} />
+          <Loader type="ThreeDots" color="#adb5bd" height={40} width={40} />
         </div>
       )
     }

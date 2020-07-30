@@ -5,7 +5,8 @@ const Specification = ({ specification }) => {
 
   return(
     <>
-      <h1>{specification.name}</h1>
+      <hr></hr>
+      <h4>{specification.name}</h4>
       <DetailSpecificationListContainer
         specificationId = {specification.id}
       />

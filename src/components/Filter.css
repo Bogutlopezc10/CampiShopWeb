@@ -3,5 +3,18 @@
   margin-top: 63px;
   width: 280px;
   position: fixed;
-  background-color: #e9ecef;
+  background-color:#f8f9fa;
+  box-shadow: 0px 2px 4px #6c757d9c;
+}
+
+.filter-title{
+  margin-left: 15px;
+  margin-bottom: 0px!important;
+  font-family: 'Pacifico';
+  font-weight: bold;
+}
+
+.container-filters h4{
+  font-family: 'Pacifico';
+  font-weight: bold;
 }

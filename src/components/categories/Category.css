@@ -1,1 +1,44 @@
+input[type="radio"]{
+  -webkit-appearance:none;
+}
 
+.container-filters .container .row{
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
+
+.category-filters label{
+  height: 67px;
+  width: 90px;
+  border: 2px solid #ec0d14;
+  position: relative;
+  margin:auto;
+  border-radius: 10px;
+  color: #ec0d14;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 12px;
+}
+
+.category-filters label svg{
+  font-size: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-80%);
+}
+
+.category-filters label span{
+  font-size: 11px;
+  position: absolute;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  font-family: "Poppins",sans-serif;
+}
+
+input[type="radio"]:checked + label{
+  background-color: #ec0d14;
+  color:white;
+}
