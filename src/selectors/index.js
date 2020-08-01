@@ -47,6 +47,18 @@ export const getSpecificationsByCategoryId = () => {
   return [];
 }
 
+//Specifications to create a product
+export const getSpecifications = () => {
+  const state = store.getState();
+  const filter = state.categories.filter;
+  const data = Object.values(state.specifications.data);
+
+  if (filter !== null) {
+    return data.filter(s => s.categoryId === parseInt(filter));
+  }
+  return [];
+}
+
 export const getDetailSpecificationBySpecificationId = (specificationId) => {
   const state = store.getState();
   const data = Object.values(state.details.data);

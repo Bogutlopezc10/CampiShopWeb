@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import {
-  FETCH_CATEGORIES
+  FETCH_CATEGORIES,
+  CHANGE_FILTER_CATEGORY_CREATE_PRODUCT
 } from '../actions/types';
 
 const defaultState = {
@@ -8,6 +9,7 @@ const defaultState = {
   isSuccess: false,
   messageSuccess: null,
   isLoading: true,
+  filter: null
 }
 
 export default (state = defaultState, action) => {
@@ -17,6 +19,11 @@ export default (state = defaultState, action) => {
         ...state,
         data: { ...state.data, ..._.mapKeys(action.payload, 'id') },
         isLoading: false
+      };
+    case CHANGE_FILTER_CATEGORY_CREATE_PRODUCT:
+      return {
+        ...state,
+        filter: action.payload
       };
     default:
       return state;

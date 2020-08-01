@@ -1,7 +1,10 @@
 import history from '../history'
 import shop from '../apis/shop';
 
-import { FETCH_CATEGORIES } from './types'
+import {
+  FETCH_CATEGORIES,
+  CHANGE_FILTER_CATEGORY_CREATE_PRODUCT
+} from './types'
 
 export const fetchCategories = () => async dispatch => {
   try {
@@ -10,4 +13,8 @@ export const fetchCategories = () => async dispatch => {
   } catch (error) {
     history.push('/error');
   }
+}
+
+export const changeFilterCategoryCreateProduct = (filterValue) => dispatch => {
+  dispatch({ type: CHANGE_FILTER_CATEGORY_CREATE_PRODUCT, payload: filterValue });
 }
