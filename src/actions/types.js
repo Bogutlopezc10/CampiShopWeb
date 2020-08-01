@@ -3,6 +3,7 @@ export const DEVELOP_URL = 'http://localhost:51828/api';
 
 // Products
 export const FETCH_PRODUCTS = 'FETCH_PRODUCTS';
+export const CREATE_PRODUCT = 'CREATE_PRODUCT';
 export const CHANGE_FILTER_CATEGORY = 'CHANGE_FILTER_CATEGORY';
 
 // Product Specifications
@@ -10,6 +11,7 @@ export const FETCH_PRODUCT_SPECIFICATIONS = 'FETCH_PRODUCT_SPECIFICATIONS';
 
 // Categories
 export const FETCH_CATEGORIES = 'FETCH_CATEGORIES';
+export const CHANGE_FILTER_CATEGORY_CREATE_PRODUCT = 'CHANGE_FILTER_CATEGORY_CREATE_PRODUCT';
 
 // Specifications
 export const FETCH_SPECIFICATIONS = 'FETCH_SPECIFICATIONS';

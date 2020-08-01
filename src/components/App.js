@@ -6,6 +6,7 @@ import Header from './Header';
 import HomePage from '../pages/HomePage';
 import ProductListPage from '../pages/Products/ProductListPage';
 import Error from './Error';
+import ProductCreatePage from '../pages/Products/ProductCreatePage';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Switch>
           <Route path="/" exact component={HomePage} />
           <Route path="/products" exact component={ProductListPage} />
+          <Route path="/createProduct" exact component={ProductCreatePage} />
           <Route path="/error" exact component={Error} />
         </Switch>
       </div>
