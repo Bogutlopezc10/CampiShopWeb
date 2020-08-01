@@ -13,7 +13,9 @@ const SpecificationList = ({ specifications, loading }) => {
     )
   }
   return(
-    renderData()
+    <div className="container">
+      {renderData()}
+    </div>
   )
 }
 

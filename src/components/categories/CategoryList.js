@@ -18,12 +18,16 @@ const CategoryList = ({ categories, loading, onChangeFilter }) => {
       )
     }
     return (
-      categories.map(category =>
-        <Category
-          category={category}
-          onChangeFilter={onChangeFilter}
-        />
-      )
+      <div className="container">
+        <div className="row category-filters">
+          {categories.map(category =>
+            <Category
+              category={category}
+              onChangeFilter={onChangeFilter}
+            />
+          )}
+        </div>
+      </div>
     )
   }
   return (

@@ -6,7 +6,8 @@ import './Filter.css'
 const Filter = () => {
   return (
     <div className="container-filters">
-      <div className="mt-4">
+      <div className="mt-3">
+        <h4 className="filter-title">Filters</h4>
         <CategoryListContainer />
         <SpecificationsListContainer />
       </div>
