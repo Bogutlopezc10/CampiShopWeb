@@ -5,11 +5,11 @@ import { getProductSpecificationsByProductId } from '../../selectors/index'
 import { connect } from 'react-redux';
 
 class ProductSpecificationListContainer extends React.Component {
-
   componentDidMount(){
     const {productId} = this.props;
     this.props.fetchProductSpecifications(productId);
   }
+
   render(){
     return(
       <ProductSpecificationList
