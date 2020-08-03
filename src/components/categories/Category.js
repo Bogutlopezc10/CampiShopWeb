@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaMobileAlt, FaLaptop, FaDesktop, FaTabletAlt, FaAngleDoubleRight } from "react-icons/fa";
+import { FaMobileAlt, FaLaptop, FaDesktop } from "react-icons/fa";
 import { IoLogoGameControllerB } from "react-icons/io";
 
 const Category = ({ category, onChangeFilter }) => {
@@ -12,16 +12,15 @@ const Category = ({ category, onChangeFilter }) => {
       return <FaLaptop />
     }else if(category.id === 2){
       return <FaDesktop />
+    }else if(category.id === 3){
+      return <IoLogoGameControllerB />
+    }else if(category.id === 4){
+      return <FaMobileAlt />
     }
   }
 
   return (
     <>
-      <input type="radio" name="category" id={category.id} value={category.id} onChange={(e) => handleChangeFilter(e)}/>
-      <label for={category.id}>
-        {renderIcon()}
-        <span>{category.name}</span>
-      </label>
       <input type="radio" name="category" id={category.id} value={category.id} onChange={(e) => handleChangeFilter(e)}/>
       <label for={category.id}>
         {renderIcon()}

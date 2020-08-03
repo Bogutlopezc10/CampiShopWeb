@@ -18,7 +18,7 @@ const Product = (props) => {
             />
           </div>
           <br></br>
-          <div className="color-product" style={{backgroundColor:"#0062cc"}}></div>
+          <div className="color-product" style={{backgroundColor:product.productColor}}></div>
           <h6 className="card-price"><NumberFormat value={product.productPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h6>
         </div>
       </div>
@@ -27,36 +27,6 @@ const Product = (props) => {
 
   return (
     <>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
-      <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-        {renderData()}
-      </div>
       <div className="col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
         {renderData()}
       </div>

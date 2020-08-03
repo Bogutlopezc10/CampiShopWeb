@@ -15,7 +15,6 @@ const ProductList = (props) => {
         </div>
       )
     }
-
     if (products.length === 0 && !loading) {
       return (
         <div>No hay data</div>

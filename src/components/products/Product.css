@@ -13,11 +13,6 @@
   margin-top: 63px;
 }
 
-.card{
-  animation-name: card-in;
-  animation-duration: 2s;
-}
-
 .main-loader{
   position: absolute;
   left: 50%;
@@ -53,6 +48,8 @@
   left: 20px;
   position: absolute;
   border-radius: 50%;
+  border: 1px solid #212529;
+  box-shadow: 2px 2px 4px black;
 }
 
 .card-price{
@@ -69,11 +66,3 @@
   margin-right: 0px!important;
 }
 
-@keyframes card-in {
-  from{
-    transform:scale(0.9);
-  }
-  to {
-    transform: scale(1);
-  }
-}

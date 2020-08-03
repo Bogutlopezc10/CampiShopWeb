@@ -1,6 +1,5 @@
 import React from 'react';
-import { FaMobileAlt, FaLaptop, FaDesktop, FaTabletAlt, FaAngleDoubleRight } from "react-icons/fa";
-import { IoLogoGameControllerB } from "react-icons/io";
+import { FaMobileAlt, FaLaptop, FaDesktop, FaTabletAlt, FaPlaystation, FaXbox, FaAngleDoubleRight } from "react-icons/fa";
 import './HomePage.css'
 import { Link } from 'react-router-dom';
 
@@ -14,9 +13,10 @@ const HomePage = () => {
           </div>
           <div className="icons">
             <FaMobileAlt />
+            <FaPlaystation />
             <FaLaptop />
-            <IoLogoGameControllerB />
             <FaTabletAlt />
+            <FaXbox />
             <FaDesktop />
           </div>
           <div className="mt-3 d-flex justify-content-center">
