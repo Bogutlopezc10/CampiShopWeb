@@ -16,7 +16,7 @@ export const changeFilterCategory = (filterValue) => dispatch => {
   dispatch({ type: CHANGE_FILTER_CATEGORY, payload: filterValue });
 }
 
-export const createCourse = (formValues, formData) => async (dispatch) => {
+export const createProduct = (formValues, formData) => async (dispatch) => {
 
   try {
     const config = {
@@ -25,14 +25,14 @@ export const createCourse = (formValues, formData) => async (dispatch) => {
       }
     };
 
-    const response = await shop.post(`Products/SavePhoto`, formData, config)
+    //const response = await shop.post(`Products/SavePhoto`, formData, config)
     const objProduct = {}
     objProduct.name = formValues.name;
-    objProduct.price = formValues.price;
+    objProduct.price = parseInt(formValues.price);
     objProduct.description = formValues.description;
-    objProduct.amount = formValues.amount;
+    objProduct.amount = parseInt(formValues.amount);
     objProduct.color = formValues.color;
-    objProduct.photo = response;
+    objProduct.photo = "photo.png";
 
     //delete some keys
     delete formValues.name;
@@ -41,11 +41,16 @@ export const createCourse = (formValues, formData) => async (dispatch) => {
     delete formValues.amount;
     delete formValues.color;
     delete formValues.photo;
+    delete formValues.categoryId;
 
     const listDetailsSpecifications = Object.values(formValues);
+    const converterlistDetailsSpecifications = listDetailsSpecifications.map((x) => {
+      return parseInt(x);
+    })
+
     const ans = {
       createProductCommand: objProduct,
-      detailSpecifications: listDetailsSpecifications
+      detailSpecifications: converterlistDetailsSpecifications
     }
     const responseProduct = await shop.post('Products', ans)
 
