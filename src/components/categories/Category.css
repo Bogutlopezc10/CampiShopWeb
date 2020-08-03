@@ -7,6 +7,18 @@ input[type="radio"]{
   margin-right: 0px!important;
 }
 
+.container-category-loader{
+  height: 158px;
+  position: relative;
+}
+
+.category-loader{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
 .category-filters label{
   height: 67px;
   width: 105px;
