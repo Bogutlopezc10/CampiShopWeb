@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import ProductCreate from '../../components/products/ProductCreate'
 import { changeFilterCategoryCreateProduct } from '../../actions/category'
 import { useDispatch, useSelector } from 'react-redux'
-import { createCourse } from '../../actions/product'
+import { createProduct } from '../../actions/product'
 import { getCategories } from '../../selectors/index'
 import { fetchCategories } from '../../actions/category'
 
@@ -19,7 +19,7 @@ const ProductCreateContainer = () => {
   }
 
   const onSubmitInfo = (formValues, formData) => {
-    dispatch(createCourse(formValues,formData));
+    dispatch(createProduct(formValues,formData));
   }
   return (
     <ProductCreate
