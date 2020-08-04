@@ -5,26 +5,32 @@ import { getProductSpecificationsByProductId } from '../../selectors/index'
 import { connect } from 'react-redux';
 
 class ProductSpecificationListContainer extends React.Component {
-  componentDidMount(){
-    const {productId} = this.props;
+  componentDidMount() {
+    const { productId } = this.props;
     this.props.fetchProductSpecifications(productId);
   }
 
-  render(){
-    return(
+  componentDidUpdate(prevProps) {
+    if (this.props.productId !== prevProps.productId) {
+      this.props.fetchProductSpecifications(this.props.productId);
+    }
+  }
+
+  render() {
+    return (
       <ProductSpecificationList
-        specifications = {this.props.specifications}
-        loading = {this.props.loading}
+        specifications={this.props.specifications}
+        loading={this.props.loading}
       />
     )
   }
 }
 
-const mapStateToProps = (state, ownProps) =>{
-  return { 
-      specifications: getProductSpecificationsByProductId(ownProps.productId),
-      loading: state.productSpecifications.isLoading,
+const mapStateToProps = (state, ownProps) => {
+  return {
+    specifications: getProductSpecificationsByProductId(ownProps.productId),
+    loading: state.productSpecifications.isLoading,
   }
 }
 
-export default connect(mapStateToProps, {fetchProductSpecifications})(ProductSpecificationListContainer);
+export default connect(mapStateToProps, { fetchProductSpecifications })(ProductSpecificationListContainer);
