@@ -16,10 +16,8 @@ export const changeFilterCategory = (filterValue) => dispatch => {
   dispatch({ type: CHANGE_FILTER_CATEGORY, payload: filterValue });
 }
 
-export const createProduct = (formValues, formData) => async () => {
-
+export const createProduct = (formValues, formData) => async dispatch => {
   try {
-
     const response = await shop.post(`Products/SavePhoto`, formData)
     const objProduct = {}
     objProduct.name = formValues.name;
@@ -27,7 +25,7 @@ export const createProduct = (formValues, formData) => async () => {
     objProduct.description = formValues.description;
     objProduct.amount = parseInt(formValues.amount);
     objProduct.color = formValues.color;
-    objProduct.photo = "photo.png";
+    objProduct.photo = response.data;
 
     //delete some keys
     delete formValues.name;
