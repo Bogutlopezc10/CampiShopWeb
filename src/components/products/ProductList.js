@@ -1,6 +1,7 @@
 import React from 'react'
 import './Product.css'
 import Loader from 'react-loader-spinner'
+import { Link } from 'react-router-dom'
 import Product from '../../components/products/Product'
 
 const ProductList = (props) => {
@@ -30,6 +31,7 @@ const ProductList = (props) => {
             />
           )}
         </div>
+        <Link to = "/createProduct">Crear</Link>
       </div>
     )
   }
