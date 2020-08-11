@@ -1,4 +1,5 @@
 import { store } from '../index'
+import { CURRENT_USER } from '../actions/types'
 
 // Products
 export const getProducts = () => {
@@ -63,4 +64,11 @@ export const getDetailSpecificationBySpecificationId = (specificationId) => {
   const state = store.getState();
   const data = Object.values(state.details.data);
   return data.filter(d => d.specificationId === parseInt(specificationId))
+}
+
+export const getShoopingCartsByUsername = () => {
+  const state = store.getState();
+  const data =  Object.values(state.shoppingCarts.data);
+
+  return data.filter(s => s.username === CURRENT_USER)
 }

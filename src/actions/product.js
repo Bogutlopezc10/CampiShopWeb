@@ -16,9 +16,15 @@ export const changeFilterCategory = (filterValue) => dispatch => {
   dispatch({ type: CHANGE_FILTER_CATEGORY, payload: filterValue });
 }
 
-export const createProduct = (formValues, formData) => async dispatch => {
+export const createProduct = (formValues, formData) => async (dispatch) => {
+
   try {
-    const response = await shop.post(`Products/SavePhoto`, formData)
+    const config = {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      }
+    };
+    const response = await shop.post(`Products/SavePhoto`, formData, config)
     const objProduct = {}
     objProduct.name = formValues.name;
     objProduct.price = parseInt(formValues.price);
