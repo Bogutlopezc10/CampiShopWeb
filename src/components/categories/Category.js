@@ -22,7 +22,7 @@ const Category = ({ category, onChangeFilter }) => {
   return (
     <>
       <input type="radio" name="category" id={category.id} value={category.id} onChange={(e) => handleChangeFilter(e)}/>
-      <label for={category.id}>
+      <label htmlFor={category.id}>
         {renderIcon()}
         <span>{category.name}</span>
       </label>

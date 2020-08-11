@@ -10,6 +10,7 @@ const ProductForm = ({ categories, onChangeFilter, loading, onSubmitInfo }) => {
     formData.append('photo', data.photo[0]);
     onSubmitInfo(data, formData);
   }
+  
   const onChangeFilterCategory = (e) => {
     onChangeFilter(e);
   }

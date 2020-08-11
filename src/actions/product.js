@@ -51,6 +51,7 @@ export const createProduct = (formValues, formData) => async (dispatch) => {
       createProductCommand: objProduct,
       detailSpecifications: converterlistDetailsSpecifications
     }
+    
     const responseProduct = await shop.post('Products', ans)
 
     dispatch({ type: CREATE_PRODUCT, payload: responseProduct.data })
