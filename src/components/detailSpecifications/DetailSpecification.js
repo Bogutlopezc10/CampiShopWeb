@@ -14,7 +14,7 @@ const DetailSpecification = ({ detail, specificationId }) => {
   return (
     <div className="form-check">
       <input type="checkbox" name={detail.name} value={detail.id} onChange={(e) => onHandleChange(e)} />
-      <label className="form-check-label" for={detail.id}>{detail.name}</label>
+      <label className="form-check-label" htmlFor={detail.id}>{detail.name}</label>
     </div>
   )
 }

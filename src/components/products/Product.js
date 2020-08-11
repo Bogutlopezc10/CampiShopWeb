@@ -7,7 +7,7 @@ const Product = (props) => {
     const { product } = props;
     return (
       <div className="card shadow-sm h-100">
-        <img className="card-img-top" src="/Asus.jpg" alt="Card product cap" />
+        <img className="card-img-top" src={product.productPhoto} alt="Card product cap" />
         <div className="card-body">
           <h5 className="card-title">{product.productName}</h5>
           <p className="card-text">{product.productDescription}</p>
@@ -21,6 +21,7 @@ const Product = (props) => {
           <div className="color-product" style={{backgroundColor:product.productColor}}></div>
           <h6 className="card-price"><NumberFormat value={product.productPrice} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h6>
         </div>
+        <button style={{position:"absolute"}} className="btn btn-primary">Agregar al carrito</button>
       </div>
     )
   }

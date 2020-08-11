@@ -40,3 +40,9 @@
   font-weight: bold;
   font-size: 20px;
 }
+
+@media (max-width: 767px) { 
+  .container-filters{
+    display: none;
+  }
+}

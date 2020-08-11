@@ -2,7 +2,7 @@
   left: 280px;
   width: calc(100% - 280px);
   position: absolute;
-  margin-top: 75px;
+  margin-top: 85px;
 }
 
 .container-loader{
@@ -20,8 +20,29 @@
   transform: translateX(-50%) translateY(-50%);
 }
 
+.title-products h2{
+  font-family: 'Pacifico';
+  font-weight: bold !important;
+  text-shadow: 2px 2px 2px #adb5bd;
+  color: #545b62;
+}
+
+.icon-filter svg{
+  color: gray;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.icon-filter{
+  display: none;
+}
+
 .card-body{
   border-top: 1px solid #e9ecef;
+}
+
+.card-img-top{
+  height: 350px;
 }
 
 .card-title{
@@ -66,3 +87,12 @@
   margin-right: 0px!important;
 }
 
+@media (max-width: 767px) { 
+  .icon-filter{
+    display: block;
+  }
+  .container-products{
+    left: 0px;
+    width: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Product.css'
 import Loader from 'react-loader-spinner'
-import { Link } from 'react-router-dom'
+import { BsFilter } from "react-icons/bs";
 import Product from '../../components/products/Product'
 
 const ProductList = (props) => {
@@ -23,7 +23,16 @@ const ProductList = (props) => {
     }
     return (
       <div className="container-products">
-        <div className="row">
+        <div className="row d-flex justify-content-between align-items-center">
+          <div className="col-auto title-products">
+            <h2>Products list</h2>
+          </div>
+          <div className="col-auto icon-filter">
+            <BsFilter />
+          </div>
+        </div>
+        <hr></hr>
+        <div className="row mt-2">
           {products.map(product =>
             <Product
               key={product.id}
@@ -31,7 +40,6 @@ const ProductList = (props) => {
             />
           )}
         </div>
-        <Link to = "/createProduct">Crear</Link>
       </div>
     )
   }
